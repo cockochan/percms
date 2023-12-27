@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Articles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "enumeration",
+      "enum": [
+        "sustainability",
+        "clean energy",
+        "carbon emissions"
+      ]
+    },
+    "content": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "reactions": {
+      "type": "enumeration",
+      "enum": [
+        "likes",
+        "shares",
+        "comments"
+      ]
+    }
+  }
+}
